@@ -9,9 +9,11 @@ input.onButtonPressed(Button.B, function () {
 let Werteliste: number[] = []
 let Messung = false
 let Beschleunigung = 0
+basic.showString("Init")
 for (let index = 0; index < 300; index++) {
     Beschleunigung = input.acceleration(Dimension.Strength)
 }
+basic.showString("Ready")
 Messung = false
 basic.forever(function () {
     if (Messung) {
