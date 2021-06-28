@@ -1,5 +1,6 @@
 input.onButtonPressed(Button.A, function () {
     Messung = !(Messung)
+    Werteliste.push(Marker)
 })
 input.onButtonPressed(Button.B, function () {
     for (let Index = 0; Index <= Werteliste.length; Index++) {
@@ -9,6 +10,8 @@ input.onButtonPressed(Button.B, function () {
 let Werteliste: number[] = []
 let Messung = false
 let Beschleunigung = 0
+let Marker = 0
+Marker = 9999
 basic.showString("Init")
 for (let index = 0; index < 300; index++) {
     Beschleunigung = input.acceleration(Dimension.Strength)
